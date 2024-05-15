@@ -5,5 +5,6 @@ public class IsVowelPresent {
         String s = "TV";
         System.out.println(str.toLowerCase().matches(".*[aeiou].*"));
         System.out.println(s.toLowerCase().matches(".*[aeiou].*"));
+        System.out.println(str.matches("[a-zA-Z_][a-z]"));
     }
 }
