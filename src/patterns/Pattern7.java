@@ -1,14 +1,9 @@
-
-/*            *
-             * *
-            * * *
-           * * * *
-          * * * * *        */
+package patterns;
 
 import java.util.Scanner;
 
-public class Pattern4 {
-    public static void main(String[] args) {
+public class Pattern7 {
+    public static void main(String[] arg){
         Scanner sc = new Scanner(System.in);
         int n=sc.nextInt();
 
@@ -19,7 +14,5 @@ public class Pattern4 {
                 System.out.print("* ");
             System.out.println();
         }
-
     }
 }
-
