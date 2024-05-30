@@ -7,13 +7,11 @@ public class MaxSubarray {
         int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
         int max1=nums[0];
         int max2=max1;
-
-        for(int i=1;i<nums.length;i++){
-            max1=Math.max(nums[i],max1+nums[i]);
+        for(int i=1;i< nums.length;i++){
+            max1=Math.max(nums[i]+max1,nums[i]);
             max2=Math.max(max1,max2);
         }
-
-        System.out.println("Maximum sum subarray is "+max2);
+        System.out.println(max2);
 
     }
 }
