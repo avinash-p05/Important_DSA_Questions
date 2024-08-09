@@ -1,5 +1,5 @@
 //•	Given an integer array, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
-//Note: A subarray is a contiguous part of an array.
+//Note: testing.A subarray is a contiguous part of an array.
 //o Input: nums = [-2,1,-3,4,-1,2,1,-5,4] o Output: 6    subarray: [4,-1,2,1]
 public class MaxSubarray {
     public static void main(String[] args) {
