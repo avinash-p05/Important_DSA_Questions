@@ -10,11 +10,21 @@ public class RotateArray {
         int k = 3;
         k= k%nums.length;
         System.out.println(k);
-        int[] temp = Arrays.copyOfRange(nums,nums.length-k,nums.length);
-        for(int i= nums.length-1;i>=k;i--)
-            nums[i]=nums[i-k];
-        for(int i=0;i<k;i++)
-            nums[i]=temp[i];
+
+        reverse(nums,0,nums.length-1);
+        reverse(nums,0,k-1);
+        reverse(nums,k,nums.length-1);
+
+
         System.out.println(Arrays.toString(nums));
+    }
+    private static void reverse(int[] nums,int start,int end){
+        while(start<end){
+            int temp=nums[start];
+            nums[start]=nums[end];
+            nums[end]=temp;
+            start++;
+            end--;
+        }
     }
 }

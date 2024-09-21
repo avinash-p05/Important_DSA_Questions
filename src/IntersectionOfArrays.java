@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 //•	Given two integer arrays, return an array of their intersection. Each element in the result must appear as many times as it shows in both arrays.
 //o Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4] o Output: [4,9] or [9,4]

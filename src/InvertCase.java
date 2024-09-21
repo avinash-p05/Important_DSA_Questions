@@ -7,7 +7,7 @@ public class InvertCase {
 
     public static String invertLastLetterCase(String sentence) {
         String[] words = sentence.split(" ");
-        StringBuilder result = new StringBuilder();
+        StringBuffer result = new StringBuffer();
 
         for (String word : words) {
             if (word.length() > 0) {
@@ -21,12 +21,11 @@ public class InvertCase {
                     invertedLastChar = Character.toUpperCase(lastChar);
                 }
 
-                result.append(word.substring(0, lastCharIndex))
-                        .append(invertedLastChar)
-                        .append(" ");
+               result.append(word.substring(0,lastCharIndex))
+                       .append(invertedLastChar)
+                       .append(" ");
             }
         }
-
         // Remove the trailing space
         return result.toString().trim();
     }

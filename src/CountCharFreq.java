@@ -21,6 +21,9 @@ public class CountCharFreq {
                 map.put(c,1);
             }
         }
+
+
+
         for(Map.Entry<Character,Integer> e : map.entrySet() )
             System.out.print(e.getValue()+""+e.getKey());
     }

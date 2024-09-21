@@ -9,16 +9,15 @@ public class LongestSubString {
         String str = "ABDEFGABEF";
         int max=0;
         int idx;
-        StringBuffer  sb = new StringBuffer();
+        StringBuffer sb = new StringBuffer();
         for(int i=0;i<str.length();i++){
-            idx=sb.indexOf(String.valueOf(str.charAt(i)));
+            idx = sb.indexOf(String.valueOf(str.charAt(i)));
             if(idx!=-1){
-                max=Math.max(max,sb.length());
+                max = Math.max(max,sb.length());
                 sb.delete(0,idx+1);
             }
             sb.append(str.charAt(i));
         }
-        max=Math.max(max,sb.length());
-        System.out.println("Maximum len is "+max);
+        System.out.println(max);
     }
 }

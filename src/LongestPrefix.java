@@ -7,15 +7,14 @@ public class LongestPrefix {
         String[] strs = {"flower","flow","flight"};
         StringBuffer sb = new StringBuffer();
         Arrays.sort(strs);
-        String f=strs[0];
-        String l=strs[strs.length-1];
-
-        for(int i=0;i< Math.min(f.length(),l.length());i++){
-            if(f.charAt(i)!=l.charAt(i)){
+        System.out.println(Arrays.toString(strs));
+        int first = strs[0].length();
+        int last = strs[strs.length-1].length();
+        for(int i=0;i<Math.min(first,last);i++){
+            if(strs[0].charAt(i)!=strs[strs.length-1].charAt(i))
                 break;
-            }
-            sb.append(f.charAt(i));
+            sb.append(strs[0].charAt(i));
         }
-        System.out.println(sb.toString());
+        System.out.println(sb);
     }
 }

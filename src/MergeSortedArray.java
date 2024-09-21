@@ -13,20 +13,28 @@ public class MergeSortedArray {
         System.out.println(Arrays.toString(a));
     }
 
-    private static void MergeSort(int[] aa,int m, int[] b, int n) {
+    private static void MergeSort(int[] a,int m, int[] b, int n) {
         if(m==0){
             for(int i=0;i<n;i++)
-                aa[i]=b[i];
+                a[i]=b[i];
             return ;
         }
         int i=m-1;
         int j=n-1;
         int k=m+n-1;
+
         while(j>=0){
-            if(i>=0 && aa[i]>b[j])
-                aa[k--]=b[i--];
-            else
-                aa[k--]=b[j--];
+            if(a[i]>b[j]){
+                a[k]=a[i];
+                a[i]=0;
+                k--;
+                i--;
+            }
+            else{
+              a[k]=b[j];
+              j--;
+              k--;
+            }
         }
     }
 }

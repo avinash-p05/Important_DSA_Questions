@@ -12,6 +12,5 @@ public class MaxSubarray {
             max2=Math.max(max1,max2);
         }
         System.out.println(max2);
-
     }
 }
