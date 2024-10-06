@@ -15,5 +15,6 @@ public class IntersectionOfArrays {
             if(set.contains(num2[i]) && (!list.contains(num2[i])))
                 list.add(num2[i]);
         System.out.println(list);
+
     }
 }

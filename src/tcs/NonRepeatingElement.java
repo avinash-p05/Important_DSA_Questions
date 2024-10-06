@@ -1,16 +1,25 @@
 package tcs;
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-public class NonRepeatingElement{
-    public static void main(String[] args){
-        int[] arr = {3,3,2,2,2};
-//        Arrays.sort(arr);
-//        if(arr.length>1 && arr[0]==arr[arr.length-1])
-//            System.out.println("0");
-        int result=0;
-        for(int i=0;i<arr.length;i++)
-            result=result^arr[i];
+public class NonRepeatingElement {
+    public static void main(String[] args) {
+        int[] arr = {3, 2, 2, 2, 1, 1};
+        Map<Integer, Integer> map = new HashMap<>();
+        int result = 0;
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+        }
+
+        // Find the first non-repeating element
+        for (int num : arr) {
+            if (map.get(num) == 1) {
+                result = num;
+            }
+        }
         System.out.println(result);
     }
 }
+

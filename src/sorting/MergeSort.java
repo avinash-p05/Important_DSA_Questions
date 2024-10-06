@@ -19,12 +19,7 @@ public class MergeSort {
         int mid = arr.length/2;
         int[] left = mergeSort(Arrays.copyOfRange(arr,0,mid));
         int[] right = mergeSort(Arrays.copyOfRange(arr,mid,arr.length));
-
-        int age= 48;
-        String result;
-        System.out.println((age>18)?"Eligible":"Not");
         return merge(left,right);
-
     }
 
     public static int[] merge(int[] a, int[]b){
