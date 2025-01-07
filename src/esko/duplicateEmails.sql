@@ -1,3 +1,4 @@
 SELECT email
 FROM employees
-GROUP BY email;
+GROUP BY email
+HAVING COUNT(email)>1;
