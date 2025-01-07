@@ -1,4 +1,15 @@
-package tcs;
+//You are working on a feature for a digital banking app. One of the requirements is to determine if a transaction ID is valid based on its digits. A transaction ID is considered valid if the sum of its digits is a multiple of 3. Write a function that takes the transaction ID as an input (an integer) and returns true if it is valid, or false otherwise.
+//
+//        Sample Test Cases:
+//        •	Input: 123
+//        Output: true
+//        Explanation: The sum of the digits is 1 + 2 + 3 = 6, which is a multiple of 3.
+//
+//        •	Input: 124
+//        Output: false
+//        Explanation: The sum of the digits is 1 + 2 + 4 = 7, which is not a multiple of 3.
+
+        package tcs;
 
 import java.util.Scanner;
 

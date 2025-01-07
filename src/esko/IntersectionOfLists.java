@@ -18,17 +18,25 @@ public class IntersectionOfLists {
             list2.add(Integer.parseInt(s));
         }
         
-        List<Integer> commonElements = findCommonElements(list1, list2);
+        List<Integer> commonElements = findCommonElementsUsingMap(list1, list2);
         System.out.println(commonElements);
     }
 
-    private static List<Integer> findCommonElements(List<Integer> list1, List<Integer> list2) {
-       
-        Set<Integer> set1 = new HashSet<>(list1);
-        Set<Integer> set2 = new HashSet<>(list2);
-        
-        set1.retainAll(set2);
-        
-        return new ArrayList<>(set1);
+    private static List<Integer> findCommonElementsUsingMap(List<Integer> list1, List<Integer> list2) {
+        Set<Integer> set = new HashSet<>();
+        List<Integer> result = new ArrayList<>();
+
+        // Build frequency map for list1
+        set.addAll(list1);
+
+        // Find common elements in list2
+        for (Integer num : list2) {
+            if (set.contains(num) && (!result.contains(num))) {
+                result.add(num);
+            }
+        }
+
+        return result;
     }
+
 }

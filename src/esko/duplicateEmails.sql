@@ -1,4 +1,3 @@
 SELECT email
 FROM employees
-GROUP BY email
-having COUNT(email)>1;
+GROUP BY email;
