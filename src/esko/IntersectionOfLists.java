@@ -25,6 +25,7 @@ public class IntersectionOfLists {
     private static List<Integer> findCommonElementsUsingMap(List<Integer> list1, List<Integer> list2) {
         Set<Integer> set = new HashSet<>();
         List<Integer> result = new ArrayList<>();
+        
 
         // Build frequency map for list1
         set.addAll(list1);
